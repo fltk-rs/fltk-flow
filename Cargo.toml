@@ -14,11 +14,11 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-fltk = { git = "https://github.com/fltk-rs/fltk-rs" }
-fltk-sys = { git = "https://github.com/fltk-rs/fltk-rs" }
+fltk = "1.2.18"
+fltk-sys = "1.2.18"
 paste = "1"
 
 [build-dependencies]
-fltk-sys = { git = "https://github.com/fltk-rs/fltk-rs" }
+fltk-sys = "1.2.18"
 fltk-build = "0.1"
 cc = "1"
