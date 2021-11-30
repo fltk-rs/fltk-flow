@@ -1,6 +1,6 @@
 [package]
 name = "fltk-flow"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2018"
 authors = ["MoAlyousef <mohammed.alyousef@neurosrg.com>"]
 description = "A flow widget wrapping Fl_Flow"
@@ -14,11 +14,11 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-fltk = "1.2.18"
-fltk-sys = "1.2.18"
+fltk = "1.2.19"
+fltk-sys = "1.2.19"
 paste = "1"
 
 [build-dependencies]
-fltk-sys = "1.2.18"
+fltk-sys = "1.2.19"
 fltk-build = "0.1"
 cc = "1"

@@ -4,8 +4,19 @@
 mod sys;
 use sys::*;
 
-mod imports;
-use imports::*;
+use fltk::app;
+use fltk::enums::*;
+use fltk::group;
+use fltk::image::Image;
+use fltk::prelude::*;
+use fltk::utils::FlString;
+use fltk::widget::Widget;
+use fltk::window::Window;
+use std::{
+    ffi::{CStr, CString},
+    mem,
+    os::raw,
+};
 
 use fltk::widget::WidgetTrackerPtr;
 
