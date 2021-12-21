@@ -1,6 +1,6 @@
 [package]
 name = "fltk-flow"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2018"
 authors = ["MoAlyousef <mohammed.alyousef@neurosrg.com>"]
 description = "A flow widget wrapping Fl_Flow"

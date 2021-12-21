@@ -4,21 +4,10 @@
 mod sys;
 use sys::*;
 
-use fltk::app;
-use fltk::enums::*;
-use fltk::group;
-use fltk::image::Image;
 use fltk::prelude::*;
 use fltk::utils::FlString;
-use fltk::widget::Widget;
-use fltk::window::Window;
-use std::{
-    ffi::{CStr, CString},
-    mem,
-    os::raw,
-};
-
 use fltk::widget::WidgetTrackerPtr;
+use std::ffi::{CStr, CString};
 
 /// Creates a flow widget
 #[derive(Debug)]
