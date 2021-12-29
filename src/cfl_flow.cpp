@@ -2,6 +2,7 @@
 #include "Fl_Flow.H"
 
 #include <cfltk/cfl_lock.h>
+#include <cfltk/cfl_widget.hpp>
 
 #include <FL/Fl_Group.H>
 #include <FL/Fl_Image.H>
