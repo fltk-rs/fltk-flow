@@ -6,14 +6,13 @@ use sys::*;
 
 use fltk::prelude::*;
 use fltk::utils::FlString;
-use fltk::widget::WidgetTrackerPtr;
 use std::ffi::{CStr, CString};
 
 /// Creates a flow widget
 #[derive(Debug)]
 pub struct Flow {
     inner: *mut Fl_Flow,
-    tracker: WidgetTrackerPtr,
+    tracker: *mut fltk_sys::fl::Fl_Widget_Tracker,
     is_derived: bool,
 }
 

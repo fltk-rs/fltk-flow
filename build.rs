@@ -7,7 +7,6 @@ fn main() {
         .file("src/cfl_flow.cpp")
         .cpp(true)
         .flag_if_supported("-w")
-        .flag_if_supported("-fno-rtti")
         .include(&fltk_out_dir.join("include"))
         .compile("fltk_flow");
 }
