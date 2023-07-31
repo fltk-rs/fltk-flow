@@ -18,6 +18,7 @@ pub struct Flow {
 
 fltk::macros::widget::impl_widget_ext!(Flow, Fl_Flow);
 fltk::macros::widget::impl_widget_base!(Flow, Fl_Flow);
+fltk::macros::widget::impl_widget_default!(Flow);
 fltk::macros::group::impl_group_ext!(Flow, Fl_Flow);
 
 impl Flow {
