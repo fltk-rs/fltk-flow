@@ -4,7 +4,7 @@
 mod sys;
 use sys::*;
 
-use fltk::prelude::*;
+use fltk::{prelude::*, widget::WidgetTracker};
 use fltk::utils::FlString;
 use std::ffi::{CStr, CString};
 
@@ -12,7 +12,7 @@ use std::ffi::{CStr, CString};
 #[derive(Debug)]
 pub struct Flow {
     inner: *mut Fl_Flow,
-    tracker: *mut fltk_sys::fl::Fl_Widget_Tracker,
+    tracker: WidgetTracker,
     is_derived: bool,
 }
 
