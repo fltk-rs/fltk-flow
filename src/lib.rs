@@ -11,8 +11,7 @@ use std::ffi::{CStr, CString};
 /// Creates a flow widget
 #[derive(Debug)]
 pub struct Flow {
-    inner: *mut Fl_Flow,
-    tracker: WidgetTracker,
+    inner: WidgetTracker,
     is_derived: bool,
 }
 
@@ -26,7 +25,7 @@ impl Flow {
     pub fn rule<W: WidgetExt>(&mut self, w: &W, inst: &str) {
         unsafe {
             let inst = CString::safe_new(inst);
-            Fl_Flow_rule(self.inner, w.as_widget_ptr() as _, inst.as_ptr());
+            Fl_Flow_rule(self.inner.widget() as _, w.as_widget_ptr() as _, inst.as_ptr());
         }
     }
 }

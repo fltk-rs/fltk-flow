@@ -5,17 +5,17 @@
 pub struct Fl_Widget {
     _unused: [u8; 0],
 }
-pub type Fl_Callback = ::core::option::Option<
+pub type Fl_Callback = ::std::option::Option<
     unsafe extern "C" fn(arg1: *mut Fl_Widget, arg2: *mut ::std::os::raw::c_void),
 >;
-pub type custom_handler_callback = ::core::option::Option<
+pub type custom_handler_callback = ::std::option::Option<
     unsafe extern "C" fn(
         arg1: *mut Fl_Widget,
         arg2: ::std::os::raw::c_int,
         arg3: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int,
 >;
-pub type custom_draw_callback = ::core::option::Option<
+pub type custom_draw_callback = ::std::option::Option<
     unsafe extern "C" fn(arg1: *mut Fl_Widget, arg2: *mut ::std::os::raw::c_void),
 >;
 #[repr(C)]
@@ -185,7 +185,7 @@ extern "C" {
 extern "C" {
     pub fn Fl_Flow_resize_callback(
         self_: *mut Fl_Flow,
-        cb: ::core::option::Option<
+        cb: ::std::option::Option<
             unsafe extern "C" fn(
                 arg1: *mut Fl_Widget,
                 x: ::std::os::raw::c_int,
@@ -308,7 +308,7 @@ extern "C" {
 extern "C" {
     pub fn Fl_Flow_set_deleter(
         arg1: *mut Fl_Flow,
-        arg2: ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
+        arg2: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
     );
 }
 extern "C" {
@@ -329,7 +329,7 @@ extern "C" {
 extern "C" {
     pub fn Fl_Flow_set_deletion_callback(
         self_: *mut Fl_Flow,
-        arg1: ::core::option::Option<
+        arg1: ::std::option::Option<
             unsafe extern "C" fn(arg1: *mut Fl_Widget, arg2: *mut ::std::os::raw::c_void),
         >,
         data: *mut ::std::os::raw::c_void,
@@ -337,6 +337,9 @@ extern "C" {
 }
 extern "C" {
     pub fn Fl_Flow_from_dyn_ptr(ptr: *mut Fl_Widget) -> *mut Fl_Flow;
+}
+extern "C" {
+    pub fn Fl_Flow_from_derived_dyn_ptr(ptr: *mut Fl_Widget) -> *mut Fl_Flow;
 }
 extern "C" {
     pub fn Fl_Flow_super_draw(ptr: *mut Fl_Widget, flag: ::std::os::raw::c_int);
